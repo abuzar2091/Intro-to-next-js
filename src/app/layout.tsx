@@ -17,6 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      
       <div className="flex justify-center items-center relative w-full">
       <Navbar/>
       </div>

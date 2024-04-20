@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -32,13 +31,13 @@ export const MenuItem = ({
       >
         {item}
       </motion.p>
-      {active !== null && children && (
+      {active !== null && children  && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
         >
-          {active === item && (
+          {active === item && children &&  (
             <div className="absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2">
               <motion.div
                 transition={transition}
